@@ -5,13 +5,23 @@ var display = document.querySelector("#timer"); // selecionando o timer
 
 var duration = 60 * 25; // Converter para segundos
 
-start.addEventListener('click', function(){
-    setInterval(() => {
-        duration--;
-        updateDisplayTimer();
-    }, 1000);
-})
+start.addEventListener("click", function () {
+  setInterval(() => {
+    duration--;
+    updateDisplayTimer();
+  }, 1000);
+});
 
-function updateDisplayTimer(){
-    display.innerText = duration;
+function updateDisplayTimer() {
+  display.innerText = formatTimer();
+}
+
+function formatTimer() {
+  var minutes = Math.floor(duration / 60);
+  var seconds = duration % 60;
+
+  var minutesZeroLeft = String(minutes).padStart(2, "0");
+  var secondsZeroLeft = String(seconds).padStart(2, "0");
+
+  return `${minutesZeroLeft}:${secondsZeroLeft}`;
 }
