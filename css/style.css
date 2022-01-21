@@ -8,11 +8,16 @@ body{
     background-color: #e24f4f;
     font: normal lighter 1em 'Patua One', cursive;
     color: white;
-    margin: 5px;
+    margin: 10px;
+    border:0px;
+    box-shadow: 1px 1px 2px black;
     width: 100px;
     height: 40px;
-   
 }
+.buttons:active{
+    background-color: #bd3737;
+}
+
 #timer {
     font: normal bold 5em 'Patua One', cursive;
     color: white;
