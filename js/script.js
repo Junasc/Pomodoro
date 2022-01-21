@@ -1,22 +1,17 @@
-var start = document.getElementById('start');
-var pause = document.getElementById('pause');
-var restart = document.getElementById('restart');
+var start = document.getElementById("start");
+var pause = document.getElementById("pause");
+var restart = document.getElementById("restart");
+var display = document.querySelector("#timer"); // selecionando o timer
 
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-        display.textContent = minutes + ":" + seconds;
-        if (--timer < 0) {
-            timer = duration;
-        }
+var duration = 60 * 25; // Converter para segundos
+
+start.addEventListener('click', function(){
+    setInterval(() => {
+        duration--;
+        updateDisplayTimer();
     }, 1000);
-}
- start.onclick = function () {
-    var duration = 60 * 0.1; // Converter para segundos
-        display = document.querySelector('#timer'); // selecionando o timer
-     startTimer(duration, display); // iniciando o timer
+})
+
+function updateDisplayTimer(){
+    display.innerText = duration;
 }
