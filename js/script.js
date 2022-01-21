@@ -1,7 +1,6 @@
 var start = document.getElementById('start');
 var pause = document.getElementById('pause');
 var restart = document.getElementById('restart');
-var t;
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
@@ -17,7 +16,7 @@ function startTimer(duration, display) {
     }, 1000);
 }
  start.onclick = function () {
-    var duration = 60 * 25; // Converter para segundos
+    var duration = 60 * 0.1; // Converter para segundos
         display = document.querySelector('#timer'); // selecionando o timer
      startTimer(duration, display); // iniciando o timer
 }
