@@ -4,13 +4,16 @@ var restart = document.getElementById("restart");
 var display = document.querySelector("#timer"); // selecionando o timer
 
 var duration = 60 * 25; // Converter para segundos
+var interval;
 
 start.addEventListener("click", function () {
-  setInterval(() => {
+ interval = setInterval(() => {
     duration--;
     updateDisplayTimer();
   }, 1000);
 });
+
+pause.addEventListener("click", stopTimer);
 
 function updateDisplayTimer() {
   display.innerText = formatTimer();
@@ -24,4 +27,8 @@ function formatTimer() {
   var secondsZeroLeft = String(seconds).padStart(2, "0");
 
   return `${minutesZeroLeft}:${secondsZeroLeft}`;
+}
+
+function stopTimer(){
+    clearInterval(interval)
 }
