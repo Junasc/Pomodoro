@@ -5,12 +5,16 @@ var display = document.querySelector("#timer"); // selecionando o timer
 
 var duration = 60 * 25; // Converter para segundos
 var interval;
+var timeIsRunning = false;
 
 start.addEventListener("click", function () {
- interval = setInterval(() => {
-    duration--;
-    updateDisplayTimer();
-  }, 1000);
+  if (!timeIsRunning) {
+    timeIsRunning = true;
+    interval = setInterval(() => {
+      duration--;
+      updateDisplayTimer();
+    }, 1000);
+  }
 });
 
 pause.addEventListener("click", stopTimer);
@@ -29,6 +33,7 @@ function formatTimer() {
   return `${minutesZeroLeft}:${secondsZeroLeft}`;
 }
 
-function stopTimer(){
-    clearInterval(interval)
+function stopTimer() {
+  clearInterval(interval);
+  timeIsRunning = false;
 }
