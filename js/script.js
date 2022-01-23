@@ -19,6 +19,8 @@ start.addEventListener("click", function () {
 
 pause.addEventListener("click", stopTimer);
 
+restart.addEventListener("click", restartTime);
+
 function updateDisplayTimer() {
   display.innerText = formatTimer();
 }
@@ -35,5 +37,10 @@ function formatTimer() {
 
 function stopTimer() {
   clearInterval(interval);
-  timeIsRunning = false;
+}
+
+function restartTime() {
+  stopTimer();
+  duration = 25 * 60;
+  display.innerText = formatTimer();
 }
