@@ -1,7 +1,11 @@
 var start = document.getElementById("start");
 var pause = document.getElementById("pause");
-var restart = document.getElementById("restart");
-var display = document.querySelector("#timer"); // selecionando o timer
+// var restart = document.getElementById("restart");
+var pausesh = document.getElementById("pausesh");
+var pauselo = document.getElementById("pauselo");
+var pomodoro = document.getElementById("pomodoro");
+var display = document.querySelector("#timerSpan"); // selecionando o timer
+
 
 var duration = 60 * 25; // Converter para segundos
 var interval;
@@ -13,13 +17,21 @@ start.addEventListener("click", function () {
     interval = setInterval(() => {
       duration--;
       updateDisplayTimer();
+     
     }, 1000);
   }
 });
 
 pause.addEventListener("click", stopTimer);
 
-restart.addEventListener("click", restartTime);
+// restart.addEventListener("click", restartTime);
+
+pausesh.addEventListener("click" , shortPause);
+
+pauselo.addEventListener("click" , longPause);
+
+pomodoro.addEventListener("click" , pomodoroTimer);
+
 
 function updateDisplayTimer() {
   display.innerText = formatTimer();
@@ -36,11 +48,28 @@ function formatTimer() {
 }
 
 function stopTimer() {
+  timeIsRunning = false;
   clearInterval(interval);
 }
 
-function restartTime() {
+// function restartTime() {
+//   stopTimer();
+//   duration = 25 * 60;
+//   display.innerText = formatTimer();
+// }
+
+function shortPause(){
+  duration = 5 * 60;
+  display.innerText = formatTimer();
   stopTimer();
+}
+function longPause(){
+  duration = 15 * 60;
+  display.innerText = formatTimer();
+  stopTimer();
+}
+function pomodoroTimer(){
   duration = 25 * 60;
   display.innerText = formatTimer();
+  stopTimer();
 }
