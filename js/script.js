@@ -17,7 +17,9 @@ start.addEventListener("click", function () {
     interval = setInterval(() => {
       duration--;
       updateDisplayTimer();
-     
+      if(duration <= 0){
+        stopTimer();
+      }
     }, 1000);
   }
 });
