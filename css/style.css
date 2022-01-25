@@ -1,15 +1,14 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap'); */ */
 
 body{
-    background-color: rgba(255, 173, 173, 0.897);
-    text-align: center;  
+    background:rgb(241, 109, 109);
+    text-align: center;
 }
 h1 {
     font: normal bold 3em 'Patua One', cursive;
     color: rgb(255, 255, 255);
-
 }
-.buttons {
+.buttondown {
     background-color: #f05d5d;
     font: normal lighter 14px 'Patua One', cursive;
     color: white;
@@ -21,7 +20,7 @@ h1 {
     height: 40px;
     transition: 0.1s; 
 }
-.buttons:active{
+.buttondown:active{
     position: relative;
     top: 3px;
     box-shadow: 3px 4px 1px #f05d5d;
@@ -48,15 +47,16 @@ h1 {
 }
 #timer {
     color: white;
-    width: auto;
-    height: auto;
+    border-radius: 12px;
+    margin: 5vmax;
+    width:auto;
+    height: 300px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to top, rgb(230, 171, 171) ,rgba(233, 38, 38, 0.836) );
     flex-direction: column;
+    background: rgba(250, 57, 89, 0.726);
 }
 #timerSpan {
-    padding: 60px;
+    margin-top: 20px;
     font: normal bold 6em 'Patua One', cursive;
 }
