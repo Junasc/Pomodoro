@@ -1,16 +1,18 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap'); */ */
-
+@font-face {
+    font-family: 'PatuaOne-Regular' ;
+    src: url('../fonts/PatuaOne-Regular.ttf') format('truetype');
+}
 body{
     background:rgb(241, 109, 109);
     text-align: center;
 }
 h1 {
-    font: normal bold 3em 'Patua One', cursive;
+    font: normal bold 3em 'PatuaOne-Regular', cursive;
     color: rgb(255, 255, 255);
 }
 .buttondown {
     background-color: #f05d5d;
-    font: normal lighter 14px 'Patua One', cursive;
+    font: normal lighter 14px 'PatuaOne-Regular', cursive;
     color: white;
     margin:10px;
     border:0px;
@@ -27,7 +29,7 @@ h1 {
 }
 .buttonsup {
     background-color: #ff97973a;
-    font: normal lighter 14px 'Patua One', cursive;
+    font: normal lighter 14px 'PatuaOne-Regular', cursive;
     color: white;
     margin: 10px;
     border:0px;
@@ -58,5 +60,5 @@ h1 {
 }
 #timerSpan {
     margin-top: 20px;
-    font: normal bold 6em 'Patua One', cursive;
+    font: normal bold 6em 'PatuaOne-Regular', cursive;
 }
