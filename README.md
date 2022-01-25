@@ -10,7 +10,7 @@ Colocar em prática conhecimentos em HTML, CSS e Javascript.
 
 ## 👨‍🏫 Exemplo de uso
 
-Confira : https://junasc.github.io/Calculadora/
+Confira : https://junasc.github.io/Pomodoro/
 
 <p align="center" style="width: 500px">
   <img src="image/pomodoro.JPG">
