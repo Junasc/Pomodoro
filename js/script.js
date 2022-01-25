@@ -18,7 +18,7 @@ start.addEventListener("click", function () {
       if(duration <= 0){
         stopTimer();
       }
-    }, 10);
+    }, 1000);
   }
 });
 
