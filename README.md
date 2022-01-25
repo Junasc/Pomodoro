@@ -13,7 +13,7 @@ Colocar em prática conhecimentos em HTML, CSS e Javascript.
 Confira : https://junasc.github.io/Calculadora/
 
 <p align="center" style="width: 500px">
-  <img src="image/pomodoro.jpg">
+  <img src="image/pomodoro.JPG">
 </p>
 
 
