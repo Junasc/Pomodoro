@@ -1,11 +1,9 @@
 var start = document.getElementById("start");
 var pause = document.getElementById("pause");
-// var restart = document.getElementById("restart");
 var pausesh = document.getElementById("pausesh");
 var pauselo = document.getElementById("pauselo");
 var pomodoro = document.getElementById("pomodoro");
 var display = document.querySelector("#timerSpan"); // selecionando o timer
-
 
 var duration = 60 * 25; // Converter para segundos
 var interval;
@@ -20,20 +18,17 @@ start.addEventListener("click", function () {
       if(duration <= 0){
         stopTimer();
       }
-    }, 1000);
+    }, 10);
   }
 });
 
 pause.addEventListener("click", stopTimer);
-
-// restart.addEventListener("click", restartTime);
 
 pausesh.addEventListener("click" , shortPause);
 
 pauselo.addEventListener("click" , longPause);
 
 pomodoro.addEventListener("click" , pomodoroTimer);
-
 
 function updateDisplayTimer() {
   display.innerText = formatTimer();
@@ -53,12 +48,6 @@ function stopTimer() {
   timeIsRunning = false;
   clearInterval(interval);
 }
-
-// function restartTime() {
-//   stopTimer();
-//   duration = 25 * 60;
-//   display.innerText = formatTimer();
-// }
 
 function shortPause(){
   duration = 5 * 60;
