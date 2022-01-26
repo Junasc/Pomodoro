@@ -31,7 +31,7 @@ h1 {
     background-color: #ff97973a;
     font: normal lighter 14px 'PatuaOne-Regular', cursive;
     color: white;
-    margin: 10px;
+    margin: 12px;
     border:0px;
     border-radius: 12px;
     width: 90px;
@@ -48,11 +48,13 @@ h1 {
     height: auto;
 }
 #timer {
+    min-width: 300px;
+    max-width: 400px;
+    padding: 15px 0;
     color: white;
     border-radius: 12px;
-    margin: 5vmax;
+    margin: auto;
     width:auto;
-    height: 300px;
     display: flex;
     justify-content: center;
     flex-direction: column;
