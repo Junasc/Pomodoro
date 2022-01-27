@@ -21,7 +21,7 @@ start.addEventListener("click", function () {
         stopTimer();
         audio.play();
       }
-    }, 10);
+    }, 1000);
   }
 });
 
