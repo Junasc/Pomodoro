@@ -9,6 +9,8 @@ var duration = 60 * 25; // Converter para segundos
 var interval;
 var timeIsRunning = false;
 
+var audio = new Audio('./sound/pause.mp3');
+
 start.addEventListener("click", function () {
   if (!timeIsRunning) {
     timeIsRunning = true;
@@ -17,8 +19,9 @@ start.addEventListener("click", function () {
       updateDisplayTimer();
       if(duration <= 0){
         stopTimer();
+        audio.play();
       }
-    }, 1000);
+    }, 10);
   }
 });
 
